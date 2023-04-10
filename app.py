@@ -26,6 +26,10 @@ def hello():
    else:
        print('Request for hello page received with no name or blank name -- redirecting')
        return redirect(url_for('index'))
+      
+@app.route('/names', methods=['GET'])
+def names():
+    return "habiba,khadija,mostafa"
 
 
 if __name__ == '__main__':
